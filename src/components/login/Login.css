@@ -1,0 +1,28 @@
+.container {
+    background-image: url('../../assets/images/login-fondo.jpg');
+    background-size: cover;
+    width: 100%;
+    color: #333333;
+    height: 100vh;
+    padding: 10px 0;
+    align-items: center;
+    justify-content: space-around;
+    display: flex;
+}
+
+.btn-login {
+    background-color: green;
+    text-decoration-color: white;
+    color: white;
+}
+
+.form-control {
+    color: white;
+}
+
+::placeholder {
+    /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: white;
+    opacity: 1;
+    /* Firefox */
+}
