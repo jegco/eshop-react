@@ -15,7 +15,6 @@ class ShopComponent extends React.Component {
             products: response,
             fetching: false
         })
-        console.log(response);
     }
 
     render() {
