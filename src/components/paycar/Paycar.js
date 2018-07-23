@@ -1,5 +1,6 @@
 import React from 'react';
 import './Paycar.css';
+import {Link} from 'react-router-dom'
 import ProductService from '../../services/ProductService';
 import NavigationComponent from '../navigation/Navigation';
 
@@ -42,14 +43,14 @@ class PaycarComponent extends React.Component {
                                                 <p className="card-text">precio: {item.product.price}</p>
                                                 <p className="card-text">cantidad: {item.quantity}</p>
                                         </li>
-                                        {console.log(item)} })
+                                        })
                                         }
                                     </ul>
                                 </div>
                                 <div className="card-action">
                                     <p className="card-text">Subtotal: {subtotal}</p>
                                     <a className="waves-effect waves-light btn">Pagar</a>
-                                    <a className="waves-effect waves-light btn">Cancelar</a>
+                                    <Link to="/shop" className="waves-effect waves-light btn">Cancelar</Link>
                                 </div>
                             </div>
                         </div>
