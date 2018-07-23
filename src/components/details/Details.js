@@ -1,5 +1,6 @@
 import React from 'react';
 import {Link} from 'react-router-dom'
+import './Details.css';
 import productService from '../../services/ProductService';
 import NavigationComponent from '../navigation/Navigation';
 
@@ -26,17 +27,16 @@ class DetailsComponent extends React.Component {
                 <div className="row">
                     {fetching ? <div className="progress">
                         <div className="indeterminate"></div>
-                    </div> : <div class="card">
-                    {console.log(stock.product.name)}
-                            <div class="card-image">
+                    </div> : <div className="card">
+                            <div className="card-image">
                                 <img src={` ../../${stock.product.imageUrl} `} />
-                                <span class="card-title">{ stock.product.name }</span>
+                                <span className="card-title">{ stock.product.name }</span>
                             </div>
-                            <div class="card-content">
-                                <p class="card-text">precio: { stock.product.price }</p>
-                                <p class="card-text">cantidad: { stock.quantity }</p>
+                            <div className="card-content">
+                                <p className="card-text">precio: { stock.product.price }</p>
+                                <p className="card-text">cantidad: { stock.quantity }</p>
                             </div>
-                            <div class="card-action">
+                            <div className="card-action">
                                 <Link to="/shop">Atras</Link>
                             </div>
                         </div>

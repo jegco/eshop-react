@@ -11,13 +11,13 @@
      updateStack: async(stack) => {
         const data = JSON.stringify(stack);
         return axios.put('https://eshop-752ae.firebaseio.com/stock/' +
-          stack.id + '.json', data).then((response) => response.json());
+          stack.id + '.json', data);
       },
 
       addToCar: async(stack) => {
         const data = JSON.stringify(stack);
         return axios.put('https://eshop-752ae.firebaseio.com/paycar/' +
-        stack.id + '.json', data).then((response) => response.json());
+        stack.id + '.json', data)
       },
     
       getProduct: async(id) => {
@@ -27,7 +27,7 @@
     
       getPaycar: async() => {
         const response = await axios
-          .get('https://eshop-752ae.firebaseio.com/paycar/.json');
+          .get('https://eshop-752ae.firebaseio.com/paycar.json');
         return response.data
       },
     

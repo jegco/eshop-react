@@ -8,19 +8,20 @@ class ShopComponent extends React.Component {
 
     constructor() {
         super()
-        this.state = {products: [], fetching: true}
+        this.state = {stocks: [], fetching: true}
     }
 
     async componentDidMount() {
         const response = await ProductService.getProducts();
+        console.log(response)
         this.setState({
-            products: response,
+            stocks: response,
             fetching: false
         })
     }
 
     render() {
-        const {products, fetching} = this.state
+        const {stocks, fetching} = this.state
         return (
             <div className="s12 shop">
             <NavigationComponent />
@@ -29,7 +30,7 @@ class ShopComponent extends React.Component {
                         <div className="indeterminate"></div>
                     </div>: <div id="container">
                         <div>
-                            { products.map(item => <Summary product={item} key={item.id}/>) }
+                            { stocks.map(item => <Summary stock={item} key={item.id}/>) }
                         </div>
                         <div>
                             <div></div>

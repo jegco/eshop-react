@@ -1,0 +1,10 @@
+img {
+    height: 60vh;
+    object-fit: cover;
+    width: 60vw;
+}
+
+.card-action {
+    display: flex;
+    align-items: center;
+}

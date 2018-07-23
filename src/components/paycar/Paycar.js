@@ -13,8 +13,10 @@ class PaycarComponent extends React.Component {
     async componentDidMount() {
         const response = await ProductService.getPaycar();
         let currentSubtotal = 0
-    
-        response.map(item =>{ if(item !== null) {currentSubtotal += item.product.price * item.quantity} })
+
+        response.map(item =>{ if(item !== null) {
+            currentSubtotal += item.product.price * item.quantity
+        } })
         this.setState({
             products: response,
             fetching: false,
@@ -35,12 +37,12 @@ class PaycarComponent extends React.Component {
                                 <div className="card-content">
                                     <ul className="collection">
                                         {products.map(item => {
-                                            if (item !== null) {
                                             <li className="collection-item col s12 m6 l3">
-                                                <img src={`../../${item.product.imageUrl}`} className="col s12 m6 l3" />
+                                                <img src={`../${item.product.imageUrl}`} className="col s12 m6 l3" />
                                                 <p className="card-text">precio: {item.product.price}</p>
                                                 <p className="card-text">cantidad: {item.quantity}</p>
-                                        </li> }})
+                                        </li>
+                                        {console.log(item)} })
                                         }
                                     </ul>
                                 </div>
