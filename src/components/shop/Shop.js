@@ -1,6 +1,8 @@
 import React from 'react';
 import Summary from '../summary/Summary';
+import './Shop.css';
 import ProductService from '../../services/ProductService';
+import NavigationComponent from '../navigation/Navigation';
 
 class ShopComponent extends React.Component {
 
@@ -21,6 +23,7 @@ class ShopComponent extends React.Component {
         const {products, fetching} = this.state
         return (
             <div className="s12 shop">
+            <NavigationComponent />
                 <div className="row">
                     { fetching ?  <div className="progress">
                         <div className="indeterminate"></div>

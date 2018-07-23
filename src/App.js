@@ -1,20 +1,20 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
-import {router} from ReactRouterDom;
+import LoginComponent from './components/login/Login';
+import ShopComponent from './components/shop/Shop';
+import DetailsComponent from './components/details/Details';
+import PaycarComponent from './components/paycar/Paycar';
+import { Route, Switch } from 'react-router-dom';
 
-class App extends Component {
+class App extends React.Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
+      <Switch>
+        <Route exact path="/" component={LoginComponent}/>
+        <Route exact path="/shop" component={ShopComponent}/>
+        <Route exact path="/details/:id" component={DetailsComponent}/>
+        <Route exact path="/paycar" component={PaycarComponent}/>
+      </Switch>
     );
   }
 }

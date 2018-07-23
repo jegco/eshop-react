@@ -1,0 +1,8 @@
+.shop {
+    background-image: url('/assets/images/main-fondo.jpg');
+    background-size: cover;
+}
+
+app-search {
+    color: white;
+}
