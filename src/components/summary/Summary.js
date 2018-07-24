@@ -17,7 +17,7 @@ class SummaryComponent extends React.Component {
             <div className="col s12 m6 l3" key={this.state.stock.id}>
                 <div className="card">
                     <div className="card-image">
-                        <img src={`../../${this.state.stock.product.imageUrl}`} />
+                        <img src={`../../${this.state.stock.product.imageUrl}`}/>
                         <span className="card-title">{this.state.stock.product.name}</span>
                     </div>
                     <div className="card-content">
@@ -47,9 +47,9 @@ class SummaryComponent extends React.Component {
             product: this.state.stock.product,
             quantity: quantity
         })
-        if( response ) {
-            this.forceUpdate()
-        } 
+        this.setState({
+            stock: response.data
+        })
     }
 
     handleChange(event) {

@@ -8,3 +8,9 @@ img {
     display: flex;
     align-items: center;
 }
+
+.details {
+    height: 100vh;
+    background-image: url('/assets/images/main-fondo.jpg');
+    background-size: cover;
+}

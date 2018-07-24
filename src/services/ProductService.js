@@ -32,9 +32,8 @@
       },
     
       pay: async() => {
-        return axios.delete('https://eshop-752ae.firebaseio.com/paycar/.json').then(
-          (response) => response.json()
-        );
+        const response = axios.delete('https://eshop-752ae.firebaseio.com/paycar/.json');
+          return response.data;
       }
  }
 

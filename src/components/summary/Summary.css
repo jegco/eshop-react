@@ -1,7 +1,9 @@
-img {
+.card-image, .card-image>img {
     height: 150px;
     object-fit: cover;
 }
+
+
 
 .card-action {
     display: flex;

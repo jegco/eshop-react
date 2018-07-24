@@ -1,9 +1,22 @@
 .collection {
-    width: 30%;
-    height: 40vh;
+    width: 100%;
+    height: 100vh;
 }
 
-img {
-    height: 33vh;
+.collection-item {
     width: 100%;
+    height: 30vh;
+}
+
+.collection-item>li {
+    width: 100%;
+    height: 100%;
+}
+
+.pagar, .cancelar {
+    margin: 1%;
+}
+
+.paycar-image {
+    height: 100%;
 }

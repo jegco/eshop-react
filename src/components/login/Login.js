@@ -12,7 +12,7 @@ class LoginComponent extends React.Component {
 
     render() {
         return (
-            <form className="container" onSubmit={this.login}>
+            <form className="container-fluid login-container" onSubmit={this.login}>
                 <div className="row">
                     <div className="col-md-12 ">
                         <div className="panel-login">

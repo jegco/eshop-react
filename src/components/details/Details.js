@@ -22,7 +22,7 @@ class DetailsComponent extends React.Component {
     render() {
         const {stock, fetching} = this.state
         return (
-            <div className="s12 shop">
+            <div className="s12 details container-fluid">
                 <NavigationComponent />
                 <div className="row">
                     {fetching ? <div className="progress">
