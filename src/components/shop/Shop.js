@@ -10,7 +10,8 @@ class ShopComponent extends React.Component {
     constructor() {
         super()
         this.state = {stocks: [], fetching: true, productToSeach: '', counter: 0}
-        this.handleChange = this.handleChange.bind(this)
+        this.handleChange = this.handleChange.bind(this);
+        this.addToCar = this.addToCar.bind(this);
     }
 
     async componentDidMount() {
@@ -27,14 +28,14 @@ class ShopComponent extends React.Component {
         const filtered = stocks.filter(item => item.product.name.includes(productToSeach) )
         return (
             <div className="s12 shop container-fluid">
-            <NavigationComponent counter={counter}/>
+            <NavigationComponent carNotEmpty={counter !== 0}/>
             <SearchComponent handleChange={this.handleChange}/>
                 <div className="row">
                     { fetching ?  <div className="progress">
                         <div className="indeterminate"></div>
                     </div>: <div id="container">
                         <div>
-                            { filtered.map(item => <Summary stock={item} key={item.id}/>) }
+                            { filtered.map(item => <Summary stock={item} key={item.id} addToCar={this.addToCar}/>) }
                         </div>
                         <div>
                             <div></div>
@@ -49,6 +50,13 @@ class ShopComponent extends React.Component {
     handleChange(value) {
         this.setState({
             productToSeach: value
+        })
+    }
+
+    addToCar() {
+        console.log(this.state.counter)
+        this.setState({
+            counter: this.state.counter + 1
         })
     }
 }

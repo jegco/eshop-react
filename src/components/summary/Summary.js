@@ -7,7 +7,7 @@ class SummaryComponent extends React.Component {
 
     constructor(props) {
         super(props)
-        this.state = {stock: this.props.stock, quantity: 0}
+        this.state = {stock: this.props.stock, quantity: 0, addToCar: this.props.addToCar}
         this.handleChange = this.handleChange.bind(this);
         this.addToPaycar = this.addToPaycar.bind(this);
     }
@@ -50,6 +50,7 @@ class SummaryComponent extends React.Component {
         this.setState({
             stock: response.data
         })
+        this.state.addToCar();
     }
 
     handleChange(event) {
