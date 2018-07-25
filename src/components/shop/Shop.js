@@ -9,7 +9,7 @@ class ShopComponent extends React.Component {
 
     constructor() {
         super()
-        this.state = {stocks: [], fetching: true, productToSeach: ''}
+        this.state = {stocks: [], fetching: true, productToSeach: '', counter: 0}
         this.handleChange = this.handleChange.bind(this)
     }
 
@@ -22,12 +22,12 @@ class ShopComponent extends React.Component {
     }
 
     render() {
-        const {stocks, fetching, productToSeach} = this.state
+        const {stocks, fetching, productToSeach, counter} = this.state
 
         const filtered = stocks.filter(item => item.product.name.includes(productToSeach) )
         return (
             <div className="s12 shop container-fluid">
-            <NavigationComponent />
+            <NavigationComponent counter={counter}/>
             <SearchComponent handleChange={this.handleChange}/>
                 <div className="row">
                     { fetching ?  <div className="progress">
