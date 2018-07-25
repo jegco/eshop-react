@@ -19,7 +19,7 @@ class NavigationComponent extends React.Component {
                     <ul id="nav-mobile" className="right hide-on-med-and-down">
                         <li><Link to="/shop"><i className="material-icons">apps</i></Link></li>
         <li><Link to="/paycar"><i className="material-icons">local_grocery_store {carNotEmpty ? <span className="new badge red">{this.state.counter}</span> : <div/> } </i></Link></li>
-                        <li><Link to="/"><i className="material-icons">inbox</i></Link></li>
+                        <li><Link to="/shop"><i className="material-icons">inbox</i></Link></li>
                         <li><Link to="/"><i className="material-icons">exit_to_app</i></Link></li>
                     </ul>
                 </div>
@@ -27,8 +27,8 @@ class NavigationComponent extends React.Component {
             <ul className="sidenav" id="mobile-demo">
                 <li><Link to="/shop"><i className="material-icons">apps</i>inicio</Link></li>
                 <li><Link to="/paycar"><i className="material-icons">local_grocery_store<span className="new badge red">{this.state.counter}</span></i>mi compra</Link></li>
-                <li><Link to="/"><i className="material-icons">inbox</i>ni idea</Link></li>
-                <li><Link to="/login"><i className="material-icons">exit_to_app</i>salir</Link></li>
+                <li><Link to="/shop"><i className="material-icons">inbox</i>ni idea</Link></li>
+                <li><Link to="/"><i className="material-icons">exit_to_app</i>salir</Link></li>
             </ul>
             </div>
         )
